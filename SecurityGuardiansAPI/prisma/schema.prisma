@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+//Security guardians
+model security_guardians{
+  guardian_name String @id
+
+  //Relationships
+  //One to many relationship with application owners
+  application_owners application_owners[]
+}
+
+//Application owners
+model application_owners{
+  owner_name String @id
+  guardian_name String
+
+  //Relationships
+  //Many to one relationship with security guardians
+  security_guardians security_guardians @relation(fields: [guardian_name], references: [guardian_name])
+  //One to many relationship with iniciativas
+  iniciativas iniciativas[]
+}
+
+//Iniciativas
+model iniciativas{
+  iniciativas_name String @id
+  owner_name String
+
+  //Relationships
+  //Many to one relationship with application owners
+  application_owners application_owners @relation(fields: [owner_name], references: [owner_name])
+  //One to many relationship with repositorios
+  repositorios repositorios[]
+}
+
+//Repositorios
+model repositorios{
+  repositorios_name String @id
+  prioridad String
+  iniciativas_name String
+
+  //Relationships
+  //Many to one relationship with iniciativas
+  iniciativas iniciativas @relation(fields: [iniciativas_name], references: [iniciativas_name])
+  //Many to many relationship with backlog
+  backlog repositorios_backlog[]
+}
+
+//Backlog
+model backlog{
+  backlog_name String @id
+
+  //Relationships
+  //Many to many relationship with repositorios
+  repositorios repositorios_backlog[]
+}
+
+//Repositorios backlog
+model repositorios_backlog{
+  info_extra String
+  repositorios repositorios @relation(fields: [repositorios_name], references: [repositorios_name])
+  repositorios_name String
+  backlog backlog @relation(fields: [backlog_name], references: [backlog_name])
+  backlog_name String
+
+  
+
+  @@id([repositorios_name, backlog_name])
+}
+
+
+
