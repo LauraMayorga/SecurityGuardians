@@ -15,9 +15,9 @@ Antes de ejecutar el script, asegúrese de que la base de datos MySQL esté conf
 ### Estructura del proyecto
 El proyecto tiene la siguiente estructura de archivos:
 
- * **importDataScript.py**: Este script contiene el código principal para importar los datos desde el archivo CSV a la base de datos MySQL.
+ * **importDataScript.ipy**: Este script contiene el código principal para importar los datos desde el archivo CSV a la base de datos MySQL.
  * **SecurityGuardians.csv**: Dentro de la carpeta Data se encuentra el archivo que contiene los datos a importar. Puede reemplazar este archivo con sus propios datos en formato CSV.
- * **EntityRelationShipDiagram.drawio.png**: Dentro de la carpeta EntityRelationshipDiagram de encuentra el diagrama entidad-relación propuesto según la estructura de los datos.
+ * **EntityRelationshipDiagram.drawio.png**: Dentro de la carpeta EntityRelationshipDiagram de encuentra el diagrama entidad-relación propuesto según la estructura de los datos.
 
 ### Diagrama entidad-relación
 A continuación se muestra el diagrama entidad-relación propuesto para la estructura de datos que se importarán desde el archivo CSV a la base de datos MySQL.\
@@ -27,7 +27,7 @@ A continuación se muestra el diagrama entidad-relación propuesto para la estru
  1. Asegúrese de tener los requisitos previos mencionados anteriormente.
  2. Abra una terminal o línea de comandos y navegue hasta el directorio donde se encuentra el archivo importDataScript.py.
  3. Ejecute el siguiente comando para iniciar el script: 
-    * python importDataScript.py
+    * python importDataScript.ipy
  4. Siga las instrucciones en la terminal para proporcionar el nombre de usuario, contraseña y el nombre de la base de datos.
  5. El script leerá el archivo CSV (SecurityGuardians.csv por defecto) y creará o actualizará la base de datos con la información del archivo.
  6. Revise la salida en la terminal para verificar si la importación se realizó correctamente.
