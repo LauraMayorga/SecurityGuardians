@@ -1,0 +1,70 @@
+Security Guardian,Application owner,Iniciativa,Repositorio,backlog,info_extra,prioridad
+Guardian A,Application owner G,Marketplace 1,Repositorio QWE,Dev que adeuda capacitación,Dev 9,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio ABC,Dev que adeuda capacitación,Dev 45,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio ABC,Dev que adeuda capacitación,Dev 29,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio ABC,Dev que adeuda capacitación,Dev 1,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio ACG,Fix vulnerability,VULN-9J,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio MP1,Fix vulnerability,VULN-129,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio MP2,Dev que adeuda capacitación,Dev 52,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio MP3,Dev que adeuda capacitación,Dev 53,Media
+Guardian B,Application owner A,MercadoPago 1,Repositorio MP4,Dev que adeuda capacitación,Dev 54,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP5,Dev que adeuda capacitación,Dev 55,Alta
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP6,Dev que adeuda capacitación,Dev 56,Alta
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP7,Dev que adeuda capacitación,Dev 57,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP8,Dev que adeuda capacitación,Dev 58,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP9,Dev que adeuda capacitación,Dev 59,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP10,Dev que adeuda capacitación,Dev 60,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP11,Dev que adeuda capacitación,Dev 61,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP12,Dev que adeuda capacitación,Dev 62,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP13,Dev que adeuda capacitación,Dev 63,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP14,Dev que adeuda capacitación,Dev 64,Alta
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP15,Dev que adeuda capacitación,Dev 65,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP16,Dev que adeuda capacitación,Dev 66,Baja
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP17,Dev que adeuda capacitación,Dev 67,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP18,Dev que adeuda capacitación,Dev 68,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP19,Dev que adeuda capacitación,Dev 69,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP20,Dev que adeuda capacitación,Dev 70,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP21,Dev que adeuda capacitación,Dev 71,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP22,Dev que adeuda capacitación,Dev 72,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP23,Dev que adeuda capacitación,Dev 73,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP24,Dev que adeuda capacitación,Dev 74,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP25,Dev que adeuda capacitación,Dev 75,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP26,Dev que adeuda capacitación,Dev 76,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP27,Dev que adeuda capacitación,Dev 77,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP28,Dev que adeuda capacitación,Dev 78,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP29,Dev que adeuda capacitación,Dev 79,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP30,Dev que adeuda capacitación,Dev 80,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP31,Dev que adeuda capacitación,Dev 81,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP32,Dev que adeuda capacitación,Dev 82,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP33,Dev que adeuda capacitación,Dev 83,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP34,Dev que adeuda capacitación,Dev 84,Baja
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP35,Dev que adeuda capacitación,Dev 85,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP36,Dev que adeuda capacitación,Dev 86,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP37,Dev que adeuda capacitación,Dev 87,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP38,Dev que adeuda capacitación,Dev 88,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP39,Dev que adeuda capacitación,Dev 89,Media
+Guardian B,Application owner A,MercadoPago 2,Repositorio MP40,Dependencia vulnerable,"Apache's Log4j library, versions 2.0-beta9 to 2.14. 1",Alta
+Guardian B,Application owner Z,MercadoPago 3,Repositorio MP41,Dev que adeuda capacitación,Dev 101,Media
+Guardian B,Application owner Z,MercadoPago 3,Repositorio MP42,Dev que adeuda capacitación,Dev 102,Media
+Guardian B,Application owner Z,MercadoPago 3,Repositorio MP43,Dev que adeuda capacitación,Dev 103,Media
+Guardian B,Application owner Z,MercadoPago 3,Repositorio MP44,Dev que adeuda capacitación,Dev 104,Media
+Guardian B,Application owner Z,MercadoPago 3,Repositorio MP45,Dev que adeuda capacitación,Dev 105,Media
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Dependencia vulnerable,"Apache's Log4j library, versions 2.0-beta9 to 2.14. 1",Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian C,Application owner C,Shipping 1,Repositorio SH22,Fix vulnerability,VULN-1A,Alta
+Guardian D,Application owner T,Marketplace 10,Repositorio MK5,Finding threat model,FINDING-1,Alta

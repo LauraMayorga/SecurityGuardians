@@ -1,0 +1,69 @@
+import pandas as pd
+import mysql.connector as mysql
+import getpass
+from mysql.connector import Error
+
+# Get data from csv
+dataroute = '/Data/SecurityGuardians.csv'
+empdata = pd.read_csv(dataroute, index_col=False, delimiter = ',')
+
+# Get credentials 
+user = input("Enter username: ")
+password = getpass.getpass("Password for %s" % user)
+ 
+# Get database name
+database = input("Enter database name: ")
+
+try:
+    # Connect to MySQL server 
+    conn = mysql.connect(host='localhost', user=user, password=password)
+
+    # Check if connection is established and create database if not exists
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute("CREATE DATABASE IF NOT EXISTS " + database)
+        print("Database is created")
+    
+    # Connect to database
+    conn = mysql.connect(host='localhost', database=database, user=user, password=password)
+
+    # Check if connection is established, create table if not exists and insert data
+    if conn.is_connected():
+        cursor = conn.cursor()
+
+        # Connect to database
+        cursor.execute("select database();")
+        record = cursor.fetchone()
+        print("You're connected to database: ", record)
+
+        # Create table if not exists
+        cursor.execute("CREATE TABLE IF NOT EXISTS security_guardians(guardian_name varchar(50) NOT NULL,PRIMARY KEY (guardian_name))")
+        cursor.execute("CREATE TABLE IF NOT EXISTS application_owners(owner_name char(50) NOT NULL, guardian_name varchar(50) NOT NULL, PRIMARY KEY (owner_name), FOREIGN KEY (guardian_name) REFERENCES security_guardians(guardian_name))")
+        cursor.execute("CREATE TABLE IF NOT EXISTS iniciativas(iniciativa_name char(50) NOT NULL, owner_name char(50) NOT NULL, PRIMARY KEY (iniciativa_name), FOREIGN KEY (owner_name) REFERENCES application_owners(owner_name))")
+        cursor.execute("CREATE TABLE IF NOT EXISTS repositorios(repositorios_name char(50) NOT NULL, prioridad char(20), iniciativa_name char(50) NOT NULL, PRIMARY KEY (repositorios_name), FOREIGN KEY (iniciativa_name) REFERENCES iniciativas(iniciativa_name))")
+        cursor.execute("CREATE TABLE IF NOT EXISTS backlog(backlog_name char(50) NOT NULL, PRIMARY KEY (backlog_name))")
+        cursor.execute("CREATE TABLE IF NOT EXISTS repositorios_backlog(repositorios_name char(50) NOT NULL, backlog_name char(50) NOT NULL, info_extra char(50), PRIMARY KEY (repositorios_name, backlog_name), FOREIGN KEY (repositorios_name) REFERENCES repositorios(repositorios_name), FOREIGN KEY (backlog_name) REFERENCES backlog(backlog_name))")
+
+        # Insert data into tables
+        for i, row in empdata.iterrows():
+            sql = "INSERT IGNORE INTO SecurityGuardians.security_guardians VALUES (%s)"
+            cursor.execute(sql, [row[0]])
+            sql = "INSERT IGNORE INTO SecurityGuardians.application_owners VALUES (%s, %s)"
+            cursor.execute(sql, [row[1],row[0]])
+            sql = "INSERT IGNORE INTO SecurityGuardians.iniciativas VALUES (%s, %s)"
+            cursor.execute(sql, [row[2],row[1]])
+            sql = "INSERT IGNORE INTO SecurityGuardians.repositorios VALUES (%s, %s, %s)"
+            cursor.execute(sql, [row[3], row[6], row[2]])
+            sql = "INSERT IGNORE INTO SecurityGuardians.backlog VALUES (%s)"
+            cursor.execute(sql, [row[4]])
+            sql = "INSERT IGNORE INTO SecurityGuardians.repositorios_backlog VALUES (%s, %s, %s)"
+            cursor.execute(sql, [row[3], row[4], row[5]])
+        
+            # Data is committed to database
+            conn.commit()
+
+        # Print message
+        print("Data inserted successfully into MySQL table")
+        
+except Error as e:
+    print("Error while connecting to MySQL", e)
